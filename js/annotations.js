@@ -978,7 +978,7 @@ extend(Chart.prototype, {
 										annotation.redraw();
 								});
 								each(chart.annotations.buttons, function(button, i) {
-										var	xOffset = chart.rangeSelector ? chart.rangeSelector.inputGroup.offset : 0,
+										var	xOffset = chart.rangeSelector && chart.rangeSelector.options.inputEnabled ? chart.rangeSelector.inputGroup.offset : 0,
 												x = chart.plotWidth + chart.plotLeft - ((i+1) * 30) - xOffset - userOffset[0];
 										button[0].attr({
 												x: x
