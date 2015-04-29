@@ -416,7 +416,7 @@ function renderButtons(chart) {
 
 function renderButton(chart, button, i) {
 	var userOffset = chart.annotations.options.buttonsOffsets,
-		xOffset = chart.rangeSelector ? chart.rangeSelector.inputGroup.offset : 0,
+		xOffset = chart.rangeSelector && chart.rangeSelector.options.inputEnabled ? chart.rangeSelector.inputGroup.offset : 0,
 		renderer = chart.renderer,
 		symbol = button.symbol,
 		offset = 30,
